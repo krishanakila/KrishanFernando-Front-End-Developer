@@ -1,0 +1,21 @@
+//Widget Component
+
+.card-chip {
+  border-radius: 12px;
+  display: inline-block;
+  background-color: #2CA6BD;
+  padding: $gap-p-x $gap-p-x-small;
+  margin: 6px 0;
+  color: $color-white;
+  font-weight: $base-font-weight--strong;
+  white-space: pre;
+}
+
+.btn-primary {
+  background-color: $color-orange-100;
+  border: 0;
+  border-radius: $gap-m-x;
+  padding: $gap-p-x-small;
+  width: 100%;
+  color: $color-white;
+}

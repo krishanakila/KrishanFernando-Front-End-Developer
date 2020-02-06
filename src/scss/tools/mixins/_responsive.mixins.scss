@@ -1,0 +1,21 @@
+/* Breakpoint Mixin */
+
+
+$responsive-approch: mf !default;
+@mixin set-breakpoint($break, $approch: $responsive-approch) {
+  $breakpoint: map_get($breakpoints, #{$break});
+  @if $approch == mf {
+    @include mq($breakpoint) {
+      @content
+    }
+  } @else if $approch == js {
+    .\@#{$break} & {
+      @content
+    }
+  }  @else {
+    $max-breakpoint: $breakpoint - 1;
+    @include mq(max-width $max-breakpoint) {
+      @content
+    }
+  }
+}

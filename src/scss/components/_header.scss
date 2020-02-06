@@ -1,0 +1,37 @@
+//Header Component
+
+//Main-Header--START
+.main-header {
+  background-image: url('assets/images/main-bg-sm.jpg');
+  height: 285px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  @include set-breakpoint(small) {
+    background-image: url('assets/images/main-bg-m.jpg');
+    height: 500px;
+  }
+  @include set-breakpoint(large) {
+    background-image: url('assets/images/lg.jpg');
+    height: 675px;
+  }
+  @include set-breakpoint(x-large) {
+    background-image: url('assets/images/x.jpg');
+    height: 716px;
+  }
+}
+
+//Main-Header--END
+
+.main-title {
+  position: absolute;
+  top: 110px;
+  margin-top: 0;
+  padding: 0 $gap-p-medium;
+  @include set-breakpoint(medium) {
+    margin-top: $gap-m-large;
+  }
+  @include set-breakpoint(x-small) {
+    padding: $gap-p-x-small 60px;
+  }
+}

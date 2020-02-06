@@ -1,0 +1,100 @@
+//Card Component
+
+.card-component {
+  padding: 20px;
+  background-color: $color-white;
+  @include set-breakpoint(x-small) {
+    padding: 60px;
+  }
+}
+
+.card-component__inner-row {
+  @include flex-box-container(null, null, space-between, null);
+  padding-bottom: $gap-p-medium;
+}
+
+.card-component__left-item-inner {
+  @include grid-container();
+  @include grid-template-columns(1fr auto, $gap-p-small);
+  @include grid-autoflow(row, 2, 1);
+}
+
+.card-component__inner-row--details {
+  @include grid-container();
+  @include grid-autoflow(row, 2, 1);
+  grid-row-gap: 10px;
+  grid-template-rows: auto auto auto;
+  @include set-breakpoint(medium) {
+    @include grid-container();
+    @include grid-template-columns(400px 1fr, 80px);
+    @include grid-autoflow(row, 2, 1);
+    grid-template-rows: auto auto auto;
+  }
+}
+
+.card-component__right-item--rating {
+  text-align: right;
+}
+
+.card-component__inner-row--fess {
+  padding: $gap-p-medium 0;
+}
+
+.card-component__title {
+  font-size: $base-font--large;
+  color: $color-black-100;
+}
+
+svg {
+  cursor: pointer;
+  width: 15px;
+  :hover, &.active {
+    fill: $color-green;
+  }
+}
+
+.view-count {
+  margin-left: $gap-m-x-small;
+}
+
+.button-section {
+  padding: $gap-p-large 0 $gap-p-medium 0;
+  grid-row: 3;
+}
+
+.sub-title {
+  padding: $gap-p-medium;
+  color: $color-black-100;
+  @include set-breakpoint(x-small) {
+    padding: $gap-p-large 0;
+  }
+}
+
+.credit-card {
+  width: 150px;
+  @include set-breakpoint(medium) {
+    width: 300px;
+  }
+}
+
+.show-more, a {
+  color: $color-blue;
+  cursor: pointer;
+}
+
+.card-component__right-item {
+  li {
+    font-size: $base-font--x-medium;
+    margin-bottom: $gap-m-small;
+    list-style-position: inside;
+    @include set-breakpoint(medium) {
+      list-style-position: initial;
+    }
+  }
+
+}
+
+.card-status {
+  text-align: center;
+}
+

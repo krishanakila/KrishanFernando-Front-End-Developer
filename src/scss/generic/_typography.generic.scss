@@ -1,0 +1,25 @@
+/* font Face and Font Family */
+
+/*
+@include font-face(Poppins, '../assets/fonts/Poppins-Regular', $font-weight--normal);
+*/
+
+h1 {
+  font-size: $base-font-size--x-huge;
+  color: $color-white;
+  @include set-breakpoint(small) {
+    font-size: $base-font-size--secondary;
+  }
+  @include set-breakpoint(medium) {
+    font-size: $base-font-size--primary;
+  }
+
+}
+
+h2{
+  font-size: $base-font--large;
+  color: $color-black;
+  @include set-breakpoint(medium) {
+    font-size: $base-font-size--huge;
+  }
+}

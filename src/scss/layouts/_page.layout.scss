@@ -1,0 +1,14 @@
+/* Master layout */
+$container-width: 1000px !default;
+
+body {
+  background-color: $color-gray-100;
+}
+
+.inner-wrapper {
+  padding: 0;
+  @include set-breakpoint(x-small) {
+    padding: 0 60px;
+  }
+}
+

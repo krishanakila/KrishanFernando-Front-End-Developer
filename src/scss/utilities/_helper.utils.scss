@@ -1,0 +1,86 @@
+/*
+/// Creates hr element style without hr tag
+/// @group Utilities
+
+.u-hr{
+  width: 100%;
+  border-top: $global-border-style--light;
+  margin: $base-element-gap;
+}
+
+.u-separator {
+  @include flex-box-container(null,null,null,center);
+  width: 100%;
+  margin: {
+    right: 0;
+    left: 0;
+  }
+  white-space: nowrap;
+
+  &::after{
+    @include pseudoelem(relative);
+    flex: 1;
+    height: 2px;
+    margin-left: $base-element-gap-small;
+    //background-color: $color-gray-lighter;
+    @include dotted-line();
+  }
+}
+
+
+/// Gives the behaviour of the div element to any other element
+/// @group Utilities
+
+.u-block{
+  display: block;
+  width: 100%;
+}
+
+/// Make an element un-clickable
+/// @group Utilities
+
+.u-unclickable{
+  pointer-events: none !important;
+}
+
+.u-nowrap {
+  white-space: nowrap;
+}
+
+.u-br{
+   &::after {
+     content: '\A';
+     white-space: pre;
+   }
+}
+
+.u-tc{
+  text-align: center;
+}
+
+.u-tr {
+  text-align: right;
+}
+
+.u-hr-top{
+  margin-top: $base-element-gap;
+  padding-top: $base-element-gap;
+  border-top: $global-border-style--light;
+}
+
+.u-hr-bottom{
+  margin-bottom: $base-element-gap;
+  padding-bottom: $base-element-gap;
+  border-bottom: $global-border-style--light;
+}
+
+.empty-separator {
+  margin-top: $base-element-gap-xlarge;
+}
+
+.gap-p{
+  padding: $base-element-gap-huge 0;
+}
+
+
+*/
